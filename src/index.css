@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-comic {
+    font-family: 'Comic Neue', 'Bangers', cursive, sans-serif;
+  }
+  .font-bangers {
+    font-family: 'Bangers', cursive, sans-serif;
+    letter-spacing: 0.05em;
+  }
+  .font-sans {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Halftone and Comic pattern */
+.comic-dots-bg {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 15%, transparent 16%);
+  background-size: 10px 10px;
+}
+
+.comic-box-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.85);
+}
+
+.comic-box-shadow-lg {
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.9);
+}
+
+.comic-box-shadow-hover:hover {
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.95);
+  transform: translate(-2px, -2px);
+}
+
+/* Comic Speech Bubble styling */
+.speech-bubble {
+  position: relative;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  border-width: 10px 8px 0;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
+}
+
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 18px;
+  border-width: 13px 10px 0;
+  border-style: solid;
+  border-color: #000000 transparent;
+  display: block;
+  width: 0;
+}
+
+/* Print styling */
+@media print {
+  body {
+    background: #ffffff !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-page-break {
+    page-break-after: always;
+  }
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "ComicCraft - AI Comic Book Generator",
+  "description": "Generate multi-panel comics with AI storylines, dynamic panel art, character dialogue, captions, and printable PDF export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
